@@ -8,9 +8,6 @@ if instance_exists(parent)
 		fuse_set = true;
 	}
 
-	x = parent.x;
-	y = parent.y;
-
 	if image_xscale < 8
 	{
 		image_xscale += 0.1;

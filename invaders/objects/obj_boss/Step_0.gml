@@ -182,6 +182,12 @@ if instance_exists(obj_player)
 	
 		audio_play_sound(snd_explosion, 1, 0);
 		audio_stop_sound(snd_boss);
+		instance_create_layer(0,0,"Instances_4",obj_roomflash)
+		instance_destroy(obj_bomb);
+		instance_destroy(obj_enemybullet);
+		instance_destroy(obj_scrap);
+		instance_destroy(obj_blaster);
+		instance_destroy(obj_blast_laser_x);
 	
 		for (i = 0; i < 7; ++i)
 		{

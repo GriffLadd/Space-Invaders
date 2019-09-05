@@ -307,6 +307,12 @@ if global.boss_health <= 0
 	audio_play_sound(snd_explosion, 1, 0);
 	audio_stop_sound(snd_boss);
 	
+	instance_destroy(obj_bomb);
+	instance_destroy(obj_enemybullet);
+	instance_destroy(obj_scrap);
+	instance_destroy(obj_blaster);
+	instance_destroy(obj_blast_laser_x);
+	
 	for (i = 0; i < 7; ++i)
 	{
 		instance_create_layer(x,y,"Instances_1",obj_healthdrop)	
