@@ -1,16 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
-if !instance_exists(obj_beam)
+if !instance_exists(obj_beam) and room != tutorial
 {
 	++move_timer;
-	if move_timer > instance_number(obj_invader) / global.difficulty + 5 and step_count < 16
+	if move_timer > instance_number(obj_invader) / global.difficulty + 5 and step_count < max_steps
 {
 	x += dir * 20;	
 	move_timer = 0;
 	++step_count;
 }
 
-if move_timer >= 0 and step_count == 16
+if move_timer >= 0 and step_count == max_steps
 {
 	dir = dir * -1;
 	y += 60;
@@ -19,7 +19,7 @@ if move_timer >= 0 and step_count == 16
 }
 }
 
-if instance_exists(obj_player)
+if instance_exists(obj_player) and room != tutorial
 {
 	bullet_direction = point_direction(x,y,obj_player.x,obj_player.y) + random(accuracy) - accuracy/2;
 	if bullet_direction > 315
@@ -57,8 +57,8 @@ if instance_exists(obj_player)
 		e_bullet.direction = bullet_direction;
 		e_bullet.image_angle = bullet_direction + 90;
 		e_bullet.speed = 6 * global.difficulty;
-		e_bullet.image_xscale = 1.5;
-		e_bullet.image_yscale = 1.5;
+		e_bullet.image_xscale = 1;
+		e_bullet.image_yscale = 1;
 		line_of_sight = false;
 		audio_play_sound(snd_shoot, 1, 0);
 	}
@@ -81,3 +81,4 @@ if keyboard_check(ord("L"))
 
 if enemy_health = 1 {image_index = 0;}
 if enemy_health = 0 {image_index = 1;}
+

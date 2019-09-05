@@ -28,6 +28,7 @@ if text_start = true
 	}
 	else if alarm[0] == -1
 	{
+		global.text_finished = true;
 		alarm[0] = text_decay;
 	}
 }

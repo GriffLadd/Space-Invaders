@@ -5,14 +5,14 @@
 if !instance_exists(obj_beam)
 {
 	++move_timer;
-	if move_timer > instance_number(obj_invader) / global.difficulty + 5 and step_count < 16
+	if move_timer > instance_number(obj_invader) / global.difficulty + 5 and step_count < max_steps
 {
 	x += dir * 20;	
 	move_timer = 0;
 	++step_count;
 }
 
-if move_timer >= 0 and step_count == 16
+if move_timer >= 0 and step_count == max_steps
 {
 	dir = dir * -1;
 	y += 60;
@@ -63,3 +63,21 @@ if keyboard_check(ord("L"))
 
 if enemy_health = 1 {image_index = 0;}
 if enemy_health = 0 {image_index = 1;}
+
+var val, highest, highest_val;
+highest = noone;
+highest_val = -1;
+with (obj_invader) {
+  val = column_num;
+  if (highest == noone || val > highest_val) {
+    highest = id;
+    highest_val = val;
+  }
+}
+if (highest != noone) {
+  if highest_val == 10 and not col10_checked
+  {
+	  max_steps += 1;
+	  col10_checked = true;
+  }
+}

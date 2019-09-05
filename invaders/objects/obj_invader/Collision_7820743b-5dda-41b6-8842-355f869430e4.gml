@@ -4,11 +4,10 @@ instance_destroy(other);
 enemy_health -= 1;
 if enemy_health == -1
 {
-	if irandom(2) = 2
+	if irandom(2) = 2 or room == tutorial
 	{
 		scrap = instance_create_layer (x,y,layer,obj_scrap);
-		scrap.direction = random_range(260,280);
-	scrap.speed = 5;
+		scrap.direction = 270;
 		scrap.image_yscale = 1.5;
 		scrap.image_xscale = 1.5;
 	}

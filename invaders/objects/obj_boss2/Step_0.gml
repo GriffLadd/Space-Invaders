@@ -261,7 +261,7 @@ if global.boss_health <= 25 and not second_phase
 	sweep_completed = false;
 	bullet_speed = 6;
 	current_attack = 0;
-	for (i = 0; i < 3; ++i)
+	for (i = 0; i < 6; ++i)
 	{
 		instance_create_layer(x,y,"Instances",obj_healthdrop)	
 	}
@@ -304,16 +304,16 @@ if global.boss_health <= 0
 	global.boss_started = false;
 	score += 500;
 	
+	instance_create_layer(0,0,"Instances_4",obj_roomflash)
+	instance_destroy(obj_bomb);
+	instance_destroy(obj_enemybullet);
+	instance_destroy(obj_blaster);
+	instance_destroy(obj_scrap);
+	instance_destroy(obj_homing_ball);
 	audio_play_sound(snd_explosion, 1, 0);
 	audio_stop_sound(snd_boss);
 	
-	instance_destroy(obj_bomb);
-	instance_destroy(obj_enemybullet);
-	instance_destroy(obj_scrap);
-	instance_destroy(obj_blaster);
-	instance_destroy(obj_blast_laser_x);
-	
-	for (i = 0; i < 7; ++i)
+	for (i = 0; i < 12; ++i)
 	{
 		instance_create_layer(x,y,"Instances_1",obj_healthdrop)	
 	}

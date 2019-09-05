@@ -7,7 +7,7 @@ healthdrop_particle = part_type_create();
 part_type_shape(healthdrop_particle,pt_shape_square);
 part_type_scale(healthdrop_particle,1,1);
 part_type_size(healthdrop_particle,0.1,0.15,-.001,0);
-part_type_color2(healthdrop_particle,16775863,16764188);
+part_type_color2(healthdrop_particle,8454143,65280);
 part_type_alpha2(healthdrop_particle,1,0.75);
 part_type_speed(healthdrop_particle,0.1,0.5,0,0);
 part_type_direction(healthdrop_particle,0,359,0,0);

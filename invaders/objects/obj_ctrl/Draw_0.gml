@@ -20,9 +20,17 @@ draw_set_color(c_white);
 draw_rectangle(10,70,100,90,2);
 
 draw_set_halign(fa_left);
-if global.beam_energy == 1
+
+if room == tutorial
 {
-	draw_text(room_width - 125, room_height - 25, "Q : Giga Beam")
+	draw_text(room_width - 175, room_height - 25, "F: Skip Tutorial")
+}
+else
+{
+	if global.beam_energy == 1
+	{
+		draw_text(room_width - 125, room_height - 25, "Q : Giga Beam")
+	}
 }
 
 // Boss healthbar

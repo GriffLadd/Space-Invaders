@@ -4,6 +4,7 @@ text = "";
 text_speed = room_speed / 5;
 text_start = false;
 global.text_exists = true;
+global.text_finished = false;
 
 text_displayed = "";
 text_length = -1;

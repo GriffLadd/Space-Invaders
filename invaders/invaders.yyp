@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "238fe461-19f9-4dc9-a2d5-fbe56a6daa22",
+            "Value": {
+                "id": "eb89b515-e17b-4450-8e37-e5badc9a27d4",
+                "resourcePath": "rooms\\tutorial\\tutorial.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "28407cd4-b5d7-4e9c-98bd-d8cc83e38c1a",
             "Value": {
                 "id": "f34cbbb0-aa6e-4f61-b4b7-6cf41f23aaa2",
@@ -683,6 +691,14 @@
             "Value": {
                 "id": "1a0d6a05-32cf-431d-afd2-f782f58e4eb5",
                 "resourcePath": "objects\\obj_boss2\\obj_boss2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e2cca6e3-dfbb-40db-b1fb-7d49e6010029",
+            "Value": {
+                "id": "ad892e12-c0a5-432c-8d88-a8fdf6cd30fe",
+                "resourcePath": "objects\\obj_tutorial\\obj_tutorial.yy",
                 "resourceType": "GMObject"
             }
         },

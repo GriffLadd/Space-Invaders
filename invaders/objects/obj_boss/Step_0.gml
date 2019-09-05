@@ -145,7 +145,7 @@ if instance_exists(obj_player)
 		bullet_accuracy *= 1.5;
 		second_phase = true;
 		stun_multiplier = 0.5;
-		for (i = 0; i < 3; ++i)
+		for (i = 0; i < 6; ++i)
 		{
 			instance_create_layer(x,y,"Instances",obj_healthdrop)	
 		}
@@ -179,17 +179,17 @@ if instance_exists(obj_player)
 		obj_spawner.alarm[1] = 180;
 		global.boss_started = false;
 		score += 500;
-	
-		audio_play_sound(snd_explosion, 1, 0);
-		audio_stop_sound(snd_boss);
 		instance_create_layer(0,0,"Instances_4",obj_roomflash)
 		instance_destroy(obj_bomb);
 		instance_destroy(obj_enemybullet);
-		instance_destroy(obj_scrap);
 		instance_destroy(obj_blaster);
-		instance_destroy(obj_blast_laser_x);
+		instance_destroy(obj_scrap);
+		instance_destroy(obj_homing_ball);
 	
-		for (i = 0; i < 7; ++i)
+		audio_play_sound(snd_explosion, 1, 0);
+		audio_stop_sound(snd_boss);
+	
+		for (i = 0; i < 12; ++i)
 		{
 			instance_create_layer(x,y,"Instances",obj_healthdrop)	
 		}

@@ -8,10 +8,13 @@ if newlevel
 	for(lines = 0; lines < 1; lines++)
 	{
 		x1 = 253;
+		column_num = 0;
 		for (i=0; i<11; i++)
 		{
 			invader = instance_create_layer (x1,spawn_y,layer,obj_invader2);
 			invader.move_timer = spawn_timer;
+			++column_num;
+			invader.column_num = column_num;
 			x1 += 49;
 		}
 		spawn_y += 60;
@@ -22,10 +25,13 @@ if newlevel
 	for(lines = 0; lines < 4; lines++)
 	{
 		x1 = 253;
+		column_num = 0;
 		for (i=0; i<11; i++)
 		{
 			invader = instance_create_layer (x1,spawn_y,layer,obj_invader);
 			invader.move_timer = spawn_timer;
+			++column_num;
+			invader.column_num = column_num;
 			x1 += 49;
 		}
 		spawn_y += 60;
@@ -55,12 +61,12 @@ if !instance_exists(obj_invader) and global.difficulty = 1 and display_text == t
 	if not global.text_exists and global.text_line = 0
 	{		
 		instance_create_layer(room_width / 2,400,layer,obj_writer);
-		obj_writer.text = "you're mum gay";
+		obj_writer.text = "This text is not finished";
 	}
 	if not global.text_exists and global.text_line = 1
 	{		
 		instance_create_layer(room_width / 2,400,layer,obj_writer);
-		obj_writer.text = "hahaha beans";
+		obj_writer.text = "Me too thanks";
 		obj_writer.text_speed = 10;
 		obj_writer.text_decay = 120;
 	}
